@@ -23,8 +23,10 @@ namespace TestingPractice
         [Fact]
         public void testleapyear2000()
         {
-            output.WriteLine(LeapYear.CheckLeapYearOrNot(2000));
-            output.WriteLine(LeapYear.CheckLeapYearOrNot(1999));
+            int num = 9;
+            //output.WriteLine(LeapYear.CheckLeapYearOrNot(2000));
+            //output.WriteLine(LeapYear.CheckLeapYearOrNot(1999));
+           output.WriteLine(String.Format("The num is {0}",num));
         }
 
         [Fact]

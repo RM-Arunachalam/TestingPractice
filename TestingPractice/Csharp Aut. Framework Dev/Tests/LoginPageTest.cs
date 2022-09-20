@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿/*using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +14,11 @@ namespace TestingPractice.Csharp_Aut._Framework_Dev.Tests
 {
     public class LoginPageTest:DriverHelper
     {
-        private readonly ITestOutputHelper testOutputHelper;
+        
         private readonly ChromeDriver chromeDriver;
         public LoginPageTest(ITestOutputHelper testOutputHelper)
         {
-            this.testOutputHelper = testOutputHelper;
+            testOutputHelper = testOutputHelper;
             //WebDriverManager
             driver =  new ChromeDriver();
         }
@@ -39,3 +39,4 @@ namespace TestingPractice.Csharp_Aut._Framework_Dev.Tests
         }
     }
 }
+*/

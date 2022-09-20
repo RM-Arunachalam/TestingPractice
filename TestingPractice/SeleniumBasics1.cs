@@ -20,7 +20,7 @@ namespace TestingPractice
             Console.WriteLine(driver.Title + " " + driver.Url);
         }
 
-        [Fact]
+       // [Fact]
         public void testleapyear2000()
         {
             int num = 9;
@@ -29,7 +29,7 @@ namespace TestingPractice
            output.WriteLine(String.Format("The num is {0}",num));
         }
 
-        [Fact]
+       // [Fact]
         public void testing2Methods()
         {
             Employee Arun = new Employee(15, "Arunachalam", "RM", "07-09-2020", "ASE", "Testing", 20000.89);

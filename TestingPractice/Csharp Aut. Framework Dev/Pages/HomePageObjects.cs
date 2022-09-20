@@ -8,9 +8,16 @@ using TestingPractice.Csharp_Aut._Framework_Dev.Helper;
 
 namespace TestingPractice.Csharp_Aut._Framework_Dev.Pages
 {
-    public  class HomePageObjects:DriverHelper
+    public  class HomePageObjects
     {
-        IWebElement alink => driver.FindElement(By.LinkText("Login"));
+        private IWebDriver _driver;
+
+        public HomePageObjects(IWebDriver driver)
+        {
+            _driver = driver;
+        }
+
+        IWebElement alink => _driver.FindElement(By.LinkText("Login"));
 
         public void LoginButtonClick() => alink.Click();
     }

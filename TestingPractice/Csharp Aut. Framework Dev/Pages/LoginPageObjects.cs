@@ -3,13 +3,18 @@ using TestingPractice.Csharp_Aut._Framework_Dev.Helper;
 
 namespace TestingPractice.Csharp_Aut._Framework_Dev.Pages
 {
-    public class LoginPageObjects : DriverHelper
+    public class LoginPageObjects 
     {
-        IWebElement UserName => driver.FindElement(By.Id("UserName"));
-        IWebElement pwd => driver.FindElement(By.Id("Password"));
-        IWebElement LoginBtn => driver.FindElement(By.CssSelector(".btn.btn-default"));
+        private IWebDriver _driver;
+        public LoginPageObjects(IWebDriver driver)
+        {
+            _driver = driver;
+        }
+        IWebElement UserName => _driver.FindElement(By.Id("UserName"));
+        IWebElement pwd => _driver.FindElement(By.Id("Password"));
+        IWebElement LoginBtn => _driver.FindElement(By.CssSelector(".btn.btn-default"));
 
-        IWebElement logoutBtn => driver.FindElement(By.LinkText("Log off"));
+        IWebElement logoutBtn => _driver.FindElement(By.LinkText("Log off"));
         public void EnterUnameAndPwd(string Uname, String Password) {
             UserName.SendKeys(Uname);
             pwd.SendKeys(Password);         

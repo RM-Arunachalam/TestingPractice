@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ReadDataFromTable\**" />
+    <EmbeddedResource Remove="ReadDataFromTable\**" />
+    <None Remove="ReadDataFromTable\**" />
+    <SpecFlowFeatureFiles Remove="ReadDataFromTable\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="ReadDataFromTable\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.0" />
     <PackageReference Include="Selenium.Support" Version="4.4.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.4.0" />

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
+using System.Reflection;
 using TechTalk.SpecFlow;
 using TestingPractice.Csharp_Aut._Framework_Dev.Helper;
 using WebDriverManager;
@@ -23,8 +24,10 @@ namespace TestingPractice.Csharp_Aut._Framework_Dev.Hooks
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("start-maximized");
             options.AddArgument("*--disable-gpu");
-            new DriverManager().SetUpDriver(new ChromeConfig());
-            _drh.driver = new ChromeDriver(options);
+            options.AddArgument("--headless");
+            //new DriverManager().SetUpDriver(new ChromeConfig());
+
+            _drh.driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),options);
 
         }
 

@@ -30,7 +30,6 @@ namespace TestingPractice.Csharp_Aut._Framework_Dev.Hooks
             _drh.driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),options);
 
         }
-
         [AfterScenario]
         public void AfterScenario()
         {
